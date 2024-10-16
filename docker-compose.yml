@@ -1,0 +1,27 @@
+
+services:
+  web:
+    build: .
+    depends_on:
+      - mysqlv
+    environment:
+      - DB_HOST=mysqlv
+      - DB_USER=barturen
+      - DB_PASSWORD=barturen
+      - DB_DATABASE=sistema
+      - DB_PORT=3306
+    ports:
+      - "3000:4000"
+
+  mysqlv:
+    image: mysql:8.0.39
+    environment:
+      MYSQL_ROOT_PASSWORD: "barturen"
+      MYSQL_DATABASE: "sistema"
+    ports:
+      - "3308:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:

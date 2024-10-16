@@ -1,0 +1,122 @@
+/* PARA LOS FILTROS */
+
+.col-lg-3 {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.templatemo-accordion {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.templatemo-accordion li {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.templatemo-accordion li:last-child {
+    border-bottom: none;
+}
+
+.templatemo-accordion a {
+    display: block;
+    padding: 12px 5px;
+    color: #343a40;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.templatemo-accordion a:hover,
+.templatemo-accordion a:focus {
+    background-color: #e9ecef;
+}
+
+.templatemo-accordion a i {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.templatemo-accordion a.collapsed i {
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+.templatemo-accordion .collapse {
+    background-color: #fff;
+    padding: 0px 20px;
+    transition: all 0.3s ease;
+    max-height: 0; /* Cambiado a 0 */
+    overflow: hidden;
+}
+
+.form-check {
+    margin-bottom: 10px;
+}
+
+.form-check-label {
+    margin-left: 5px;
+}
+
+/*------------------- PARA EL NAVBAR-------------------- */
+/* Estilos para el menú desplegable */
+.dropdown-menu {
+    background-color: #f8f9fa;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 0;
+}
+
+.dropdown-item {
+    color: #212934;
+    padding: 0.5rem 1rem;
+}
+
+.dropdown-item:hover {
+    background-color: #e9ecef;
+    color: #212934;
+}
+
+/* Estilos para submenús */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+/* Estilos para hacer los menús responsivos */
+@media (max-width: 991.98px) {
+    .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        transition: none;
+        transform: none !important;
+    }
+
+    .dropdown-submenu .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        transition: none;
+        transform: none !important;
+        padding-left: 1rem;
+    }
+}

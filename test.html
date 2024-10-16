@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtros</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Estilo de los filtros */
+        .templatemo-accordion {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .templatemo-accordion li {
+            margin-bottom: 20px;
+        }
+
+        .accordion-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            color: #333;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .accordion-title i {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        /* Estilo de los checkboxes */
+        .form-check {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        /* Estilo de los íconos del desplegable */
+        .rotate {
+            transform: rotate(-90deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="col-lg-3">
+        <h1 class="h2 pb-4">Filtros</h1>
+        <ul class="list-unstyled templatemo-accordion">
+            <li>
+                <a class="accordion-title" href="#" onclick="toggleAccordion(this)">
+                    Género
+                    <i class="fas fa-chevron-circle-down"></i>
+                </a>
+                <div class="accordion-content">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="hombre" id="pf_g_genero-hombre">
+                        <label class="form-check-label" for="pf_g_genero-hombre">Hombre</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="mujer" id="pf_g_genero-mujer">
+                        <label class="form-check-label" for="pf_g_genero-mujer">Mujer</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="unisex" id="pf_g_genero-unisex">
+                        <label class="form-check-label" for="pf_g_genero-unisex">Unisex</label>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a class="accordion-title" href="#" onclick="toggleAccordion(this)">
+                    Categorías
+                    <i class="fas fa-chevron-circle-down"></i>
+                </a>
+                <div class="accordion-content">
+                    <!-- Inserta aquí tus opciones de categorías -->
+                </div>
+            </li>
+            <li>
+                <a class="accordion-title" href="#" onclick="toggleAccordion(this)">
+                    Marca
+                    <i class="fas fa-chevron-circle-down"></i>
+                </a>
+                <div class="accordion-content">
+                    <!-- Inserta aquí tus opciones de marcas -->
+                </div>
+            </li>
+            <li>
+                <a class="accordion-title" href="#" onclick="toggleAccordion(this)">
+                    Tallas
+                    <i class="fas fa-chevron-circle-down"></i>
+                </a>
+                <div class="accordion-content">
+                    <!-- Inserta aquí tus opciones de tallas -->
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleAccordion(element) {
+            element.nextElementSibling.classList.toggle('show');
+            element.querySelector('i').classList.toggle('rotate');
+        }
+    </script>
+</body>
+</html>

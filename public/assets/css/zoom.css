@@ -1,0 +1,54 @@
+.zoom {
+    position: relative;
+    overflow: hidden;
+    cursor: none;
+}
+
+.zoom-lens {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.1); /* Cambia el valor de alpha a 0.3 para mayor transparencia */
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    pointer-events: none;
+    display: none;
+    box-sizing: border-box;
+}
+
+.zoom img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* BORDE NEGRO DENTRO DEL CARRUSEL */
+.product-links-wap .carousel-item img.active {
+    border: 2px solid black;
+}
+/* DESACTIVAR LA TALLA CUANDO ESTA EN 0 */
+.btn-size-disabled {
+    pointer-events: none; /* Desactiva la interacción del botón */
+    opacity: 0.7; /* Reduce la opacidad del botón */
+    background-color: #86ca96; /* Cambia el color de fondo del botón a verde */
+    border-color: #86ca96; /* Cambia el color del borde del botón a verde */
+    color: #fff; /* Cambia el color del texto del botón a blanco */
+    position: relative; /* Establece la posición relativa para el botón */
+}
+.btn-size-disabled::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, transparent 49%, white 49.5%, white 50.5%, transparent 52%);
+    /* background: linear-gradient(to bottom right, white 0%, white 50%, #86ca96 50%, #86ca96 100%); */
+    z-index: 1;
+}
+/* Boton aviso del sotck */
+.stock-message {
+    margin-bottom: 5px; /* Centra el mensaje horizontalmente */
+    display: none;
+}
